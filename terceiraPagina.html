@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <title>pagina</title>
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+         * {
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+         font-family: 'Inter', sans-serif;
+         }
+         body {
+         width: 100%;
+         height: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: #0c0ce94d;
+         }
+         .container {
+         width: 80%;
+         height: 80vh;
+         display: flex;
+         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+         }
+         .form-image {
+         width: 50%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: #fde3a7d7;
+         padding: 1rem;
+         }
+         .form-image img {
+         width: 31rem;
+         }
+         .form {
+         width: 50%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         background-image: image-set(45deg yellow, green);
+         padding: 3rem;
+         }
+         .form-header {
+         margin-bottom: 3rem;
+         display: flex;
+         justify-content: space-between;
+         }
+         .sairbutton {
+         display: flex;
+         align-items: center;
+         }
+         .sairbutton button {
+         border: none;
+         background-color: #6c63ff;
+         padding: 0.4rem 1rem;
+         border-radius: 5px;
+         cursor: pointer;
+         }
+         .sairbutton button:hover {
+         background-color: #6b63fff1;
+         }
+         .sairbutton button a {
+         text-decoration: none;
+         font-weight: 500;
+         color: #fff;
+         }
+         .form-header h1::after {
+         content: '';
+         display: block;
+         width: 5rem;
+         height: 0.3rem;
+         background-color: #6c63ff;
+         margin: 0 auto;
+         position: absolute;
+         border-radius: 10px;
+         }
+         .input-group {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         padding: 1rem 0;
+         }
+         .input-box {
+         display: flex;
+         flex-direction: column;
+         margin-bottom: 1.1rem;
+         }
+         .input-box input {
+         margin: 0.6rem 0;
+         padding: 0.8rem 1.2rem;
+         border: none;
+         border-radius: 10px;
+         box-shadow: 1px 1px 6px #0000001c;
+         font-size: 0.8rem;
+         }
+         .input-box input:hover {
+         background-color: #eeeeee75;
+         }
+         .input-box input:focus-visible {
+         outline: 1px solid #6c63ff;
+         }
+         .input-box label,
+         .gender-title h6 {
+         font-size: 0.75rem;
+         font-weight: 600;
+         color: #000000c0;
+         }
+         .input-box input::placeholder {
+         color: #000000be;
+         }
+         .gender-group {
+         display: flex;
+         justify-content: space-between;
+         margin-top: 0.62rem;
+         padding: 0 .5rem;
+         }
+         .gender-input {
+         display: flex;
+         align-items: center;
+         }
+         .gender-input input {
+         margin-right: 0.35rem;
+         }
+         .gender-input label {
+         font-size: 0.81rem;
+         font-weight: 600;
+         color: #000000c0;
+         }
+         @media screen and (max-width: 1330px) {
+         .form-image {
+         display: none;
+         }
+         .container {
+         width: 50%;
+         }
+         .form {
+         width: 100%;
+         }
+         }
+         @media screen and (max-width: 1064px) {
+         .container {
+         width: 90%;
+         height: auto;
+         }
+         .input-group {
+         flex-direction: column;
+         z-index: 5;
+         padding-right: 5rem;
+         max-height: 10rem;
+         overflow-y: scroll;
+         flex-wrap: nowrap;
+         }
+         .gender-inputs {
+         margin-top: 2rem;
+         }
+         .gender-group {
+         flex-direction: column;
+         }
+         .gender-title h6 {
+         margin: 0;
+         }
+         .gender-input {
+         margin-top: 0.5rem;
+         }
+         }
+         /* #################################################### */
+         .salvar-button button {
+         width: 100%;
+         margin-top: 50%;
+         border: none;
+         background-color: #6c63ff;
+         padding: 0.62rem;
+         border-radius: 50px;
+         cursor: pointer;
+         }
+         .salvar-button button:hover {
+         background-color: #6b63fff1;
+         }
+         .salvar-button button a {
+         text-decoration: none;
+         font-size: 0.93rem;
+         font-weight: 500;
+         color: #fff;
+         }
+         /* #################################################### */
+         .esquerda-button button {
+         width: 50%;
+         margin-top: 70%;
+         border: none;
+         background-color: #6c63ff;
+         padding: 0.62rem;
+         border-radius: 50px;
+         cursor: pointer;
+         }
+         .esquerda-button button:hover {
+         background-color: #6b63fff1;
+         }
+         .esquerda-button button a {
+         text-decoration: none;
+         font-size: 15px;
+         font-weight: 400;
+         color: #fff;
+         }
+         /* #################################################### */
+         .direita-button button {
+         width: 40%;
+         margin-top: 10%;
+         border: none;
+         background-color: #6c63ff;
+         padding: 0.62rem;
+         border-radius: 50px;
+         cursor: pointer;
+         }
+         .direita-button button:hover {
+         background-color: #6b63fff1;
+         }
+         .direita-button button a {
+         text-decoration: none;
+         font-size: 15px;
+         font-weight: 400;
+         color: #fff;
+         }
+         /* #################################################### */
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="form-image" style="width: 100rem;">
+            <span id="imagem"><img class="card-img-top" src="./duration.png" width="450" height="489"></span>
+            <span id="imagem2"></span>
+         </div>
+         <div class="form">
+            <form action="#">
+               <div class="form-header">
+                  <div class="title">
+                     <h1>Sistema Métrico</h1>
+                  </div>
+                  <div class="sairbutton">
+                     <button> <a href="perfuntaFinal.html">Sair</a></button>
+                  </div>
+               </div>
+               <div class="input-group">
+                  <div class="input-box">
+                     <label for="numero1:">Digite o valor Classificação:</label>
+                     <input id="classifNumero" type="text" name="classifNumero" placeholder="Digite Classificação" required>
+                  </div>
+                  <!-- <div class="input-box">
+                     <label for="numero2">Segunda Classificação:</label>
+                     <input id="numero2" type="text" name="segundoNumero" placeholder="Digite Segundo Classificação" required>
+                     </div> -->
+               </div>
+               <!-- <div class="esquerda-button">
+                  <button><a href="#">Valor da Esquenda</a> </button>
+                  </div>
+                  
+                  <div class="direita-button">
+                  <button><a href="#">Valor da Direita</a> </button>
+                  </div>-->
+               <div class="salvar-button">
+                  <button onclick="verificarSalvo()">Salvar </button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </body>
+   <script>
+      // const classfimagem = document.getElementById('classfimagem');
+       const mostrarImagemNaTela = document.getElementById('mostrarImagemNaTela');
+       function sairbutton() {
+         window.location.botton = "perfuntaFinal.html"
+       }
+      
+       function verificarSalvo(){
+           var classifNumero = 0;
+           var classifNumero = document.getElementById("classifNumero").value;
+      
+           var numero = 0;
+           var numero = parseFloat(classifNumero);
+           alert(numero);
+              
+       if( numero >= 3.430 && numero <=3.742){
+                   
+                   document.getElementById("imagem").innerHTML = '<img class="card-img-top" src="./poutcome.png" width="450" height="489">';
+      
+                   if( numero >= 2.883 && numero <= 3.057){
+                   
+                   document.getElementById("imagem").innerHTML = '<img class="card-img-top" src="./month.png" width="250" height="289">';
+                   document.getElementById("imagem2").innerHTML = '<img class="card-img-top" src="./month2.png" width="250" height="289">';
+               
+               }
+               }else{
+                  
+                   document.getElementById("imagem").innerHTML = '<img class="card-img-top" src="./marita.png" width="450" height="489">';
+                  if( numero >= 109 && numero <=188 ){
+                   
+                   document.getElementById("imagem").innerHTML = '<img class="card-img-top" src="./math.png" width="450" height="489">';
+               } 
+               if( numero >= 56 && numero <=93 ){
+                  
+                   document.getElementById("imagem").innerHTML = '<img class="card-img-top" src="./single.png" width="450" height="489">';
+               } 
+               if( numero >= 30 && numero <=46 ){
+                   
+                   document.getElementById("imagem").innerHTML = '<img class="card-img-top" src="./divorce.png" width="450" height="489">';
+               } 
+               }
+      
+              
+               
+            }
+            
+            
+   </script>
+</html>
